@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Feeder Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/analytics.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="active">Home</a> |
+        <a href="/module.html">Modules</a> |
+        <a href="/schedule.html">Schedules</a> |
+        <a href="/history.html">History</a> |
+        <a href="/camera.html">Camera</a>
+    </nav>
+
+    <div style="text-align: right; margin: 20px 0;">
+        <button onclick="printAnalyticsPDF()"
+            style="background: #ff6b35; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+            Print Analytics as PDF
+        </button>
+    </div>
+
+    <h1>Dashboard</h1>
+
+    <!-- Analytics Summary Cards -->
+    <div class="analytics-summary">
+        <div class="summary-card">
+            <div class="summary-label">Total Fed Today</div>
+            <div class="summary-value" id="totalFedToday">0g</div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-label">Active Modules</div>
+            <div class="summary-value" id="activeModules">0/0</div>
+        </div>
+    </div>
+
+    <h2>Module List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Module ID</th>
+                <th>Camera ID</th>
+                <th>Status</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody id="moduleTableBody">
+            <tr>
+                <td colspan="4">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="analytics-charts">
+        <div class="chart-container">
+            <h3>Weekly Feeding Overview</h3>
+            <canvas id="weeklyChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Module Status Distribution</h3>
+            <canvas id="statusChart"></canvas>
+        </div>
+    </div>
+
+    <script src="/static/scripts/chart.min.js"></script>
+    <script src="/static/scripts/index.js"></script>
+    <script src="/static/scripts/analytics.js"></script>
+    <script src="/static/scripts/html2pdf.bundle.min.js"></script>
+</body>
+
+</html>

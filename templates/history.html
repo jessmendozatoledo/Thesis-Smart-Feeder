@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeding History</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/scripts/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/module.html">Modules</a> |
+        <a href="/schedule.html">Schedules</a> |
+        <a href="/history.html" class="active">History</a> |
+        <a href="/camera.html">Camera</a>
+    </nav>
+
+    <div style="text-align: right; margin: 20px 0;">
+        <button onclick="printHistoryPDF()"
+            style="background: #ff6b35; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+            Print History as PDF
+        </button>
+    </div>
+
+    <h1>Feeding History</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>History ID</th>
+                <th>Created At</th>
+                <th>Schedule ID</th>
+                <th>Module ID</th>
+                <th>Feed Date</th>
+                <th>Feed Time</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="historyTableBody">
+            <tr>
+                <td colspan="9">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="/static/scripts/history.js"></script>
+</body>
+
+</html>

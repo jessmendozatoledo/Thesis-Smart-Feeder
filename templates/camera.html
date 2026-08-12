@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Monitoring</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/camera.css">
+    <script src="/static/scripts/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/module.html">Modules</a> |
+        <a href="/schedule.html">Schedules</a> |
+        <a href="/history.html">History</a> |
+        <a href="/camera.html" class="active">Camera</a>
+    </nav>
+
+    <div class="container">
+        <h1>Camera Monitoring</h1>
+
+        <div class="camera-controls">
+            <label for="cameraSelect">Select Camera:</label>
+            <select id="cameraSelect">
+                <option value="01">Camera 01</option>
+                <option value="02">Camera 02</option>
+            </select>
+            <button onclick="refreshGallery()">Refresh</button>
+        </div>
+
+        <div style="text-align: right; margin: 20px 0;">
+            <button onclick="printCameraPDF()"
+                style="background: #ff6b35; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+                Print Camera Images as PDF
+            </button>
+        </div>
+
+        <div class="info-banner">
+            <strong>Capture Schedule:</strong> Images are captured 15 seconds after food dispensing (During Feeding),
+            and again 3-5 minutes later (After Feeding) to verify consumption.
+        </div>
+
+        <h2>Captured Images</h2>
+
+        <div class="feed-type-header during">During Feeding</div>
+        <div id="duringFeedingGallery" class="gallery-grid">
+            <div class="loading">Loading images...</div>
+        </div>
+
+        <div class="feed-type-header after">After Feeding</div>
+        <div id="afterFeedingGallery" class="gallery-grid">
+            <div class="loading">Loading images...</div>
+        </div>
+    </div>
+
+    <script src="/static/scripts/camera.js"></script>
+</body>
+
+</html>
