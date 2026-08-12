@@ -25,3 +25,21 @@ The system consists of three main components working in harmony:
 1. **Central Management Server & Web Dashboard:** Provides the user interface for schedule configuration, live camera monitoring, analytics, and history tracking.
 2. **Dispenser Module (ESP32):** Manages servo-driven feed release, monitors food weight levels, and requests schedule execution from the central backend.
 3. **Camera Monitoring Unit (ESP32-CAM):** Captures high-resolution snapshots before/during/after feeding events and wirelessly transmits image data to the central server.
+
+---
+
+## 📦 Deployment Specifications & Dependencies
+
+### `Procfile` (Cloud Deployment Command)
+```text
+web: gunicorn app:app
+```
+
+### `requirements.txt` (Python Dependencies)
+```text
+Flask==3.0.0
+flask-cors
+pytz
+python-dotenv
+gunicorn
+```
