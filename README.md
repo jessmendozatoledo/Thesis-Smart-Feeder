@@ -4,6 +4,13 @@ An automated, smart, and scalable **Animal Feeder System** featuring real-time m
 
 ---
 
+## 📹 System Demonstration Videos
+
+* 🎬 **Hardware & Operational Demo:** [Watch Video Demonstration](video/Thesis_demo.mp4)
+* 💻 **Web Interface & Dashboard Demo:** [Watch UI Overview](video/Thesis_UI.mp4)
+
+---
+
 ## 📌 Key System Features
 
 * **Real-Time Automated Dispensing:** Configure custom feeding schedules (dates, times, and feed amounts in grams) via an interactive web dashboard.
